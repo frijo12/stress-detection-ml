@@ -201,6 +201,7 @@ This project is open-source and available under the [MIT License](LICENSE).
 ## ✨ Author
 
 **Frijo Antony CF**
+
 Final Year B.Tech CSE Student
 Passionate about AI, ML, and building intelligent web applications
 📫 Contact: [LinkedIn](www.linkedin.com/in/frijoantonycf)
