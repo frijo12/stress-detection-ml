@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Stress Level Predictor</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            background-color: #f9f9f9;
+        }
+        form {
+            max-width: 500px;
+            margin: auto;
+            padding: 25px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+        }
+        h2 {
+            text-align: center;
+        }
+        label {
+            display: block;
+            margin-top: 15px;
+        }
+        input, select {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+        }
+        button {
+            margin-top: 20px;
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        h3 {
+            text-align: center;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+
+    <form action="/predict" method="post">
+        <h2>Stress Level Prediction</h2>
+
+        <label>Gender:</label>
+        <select name="gender">
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+        </select>
+
+        <label>Age:</label>
+        <input type="number" name="age" required>
+
+        <label>Occupation:</label>
+        <select name="occupation">
+            <option value="Engineer">Engineer</option>
+            <option value="Doctor">Doctor</option>
+            <option value="Teacher">Teacher</option>
+            <option value="Nurse">Nurse</option>
+            <option value="Lawyer">Lawyer</option>
+            <option value="Accountant">Accountant</option>
+        </select>
+
+        <label>Sleep Duration (hours):</label>
+        <input type="number" step="0.1" name="sleep_duration" required>
+
+        <label>Quality of Sleep (1-10):</label>
+        <input type="number" name="quality_of_sleep" required>
+
+        <label>Physical Activity Level (1-10):</label>
+        <input type="number" name="physical_activity" required>
+
+        <label>BMI Category:</label>
+        <select name="bmi_category">
+            <option value="Normal">Normal</option>
+            <option value="Overweight">Overweight</option>
+            <option value="Obese">Obese</option>
+        </select>
+
+        <label>Heart Rate:</label>
+        <input type="number" name="heart_rate" required>
+
+        <label>Daily Steps:</label>
+        <input type="number" name="daily_steps" required>
+
+        <label>Sleep Disorder:</label>
+        <select name="sleep_disorder">
+            <option value="Sleep Apnea">None</option>
+            <option value="Insomnia">Insomnia</option>
+            <option value="Sleep Apnea">Sleep Apnea</option>
+        </select>
+
+        <button type="submit">Predict</button>
+
+        {% if prediction_text %}
+        <h3>{{ prediction_text }}</h3>
+        {% endif %}
+    </form>
+
+</body>
+</html>
