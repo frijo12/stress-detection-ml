@@ -204,7 +204,7 @@ This project is open-source and available under the [MIT License](LICENSE).
 
 Final Year B.Tech CSE Student
 Passionate about AI, ML, and building intelligent web applications
-📫 Contact: [LinkedIn](www.linkedin.com/in/frijoantonycf)
+📫 Contact: [LinkedIn](https://www.linkedin.com/in/frijoantonycf)
 
 ---
 
